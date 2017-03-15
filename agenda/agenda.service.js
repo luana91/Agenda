@@ -7,6 +7,13 @@ angular.module('app').service('AgendaSrv', function () {
         luogo: "Stella Maris",
         priorita: "#ffa500"
 
+    }, {
+        titolo: "Compleanno Paolo",
+        data: new Date(2017, 03, 20, 09, 00),
+        descrizione: "40 anni, festa GRANDE",
+        luogo: "Stella Maris",
+        priorita: "red"
+
     }];
 
     var getAppuntamenti = function () {

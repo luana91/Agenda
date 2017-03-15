@@ -5,7 +5,7 @@
         <div class="appuntamento">
             <div class="row">
                 <div class="col-sm-6 col-md-4" ng-repeat="app in appuntamenti">
-                    <div class="thumbnail">
+                    <div class="thumbnail" style="border:2px solid {{app.priorita}}; border-radius:10px;">
                         <div class="caption">
                             <h3>{{app.titolo}}</h3>
                             <p>{{app.data | date: 'dd/MM/yyyy'}} alle ore: {{app.data | date: 'HH:mm'}}</p>
