@@ -34,9 +34,17 @@ angular.module('app').service('AgendaSrv', function () {
         appuntamenti.splice(indice, 1);
     }
 
+    var getAppuntamento = function (titolo) {
+        return appuntamenti.find(function (el) {
+            return el.titolo == titolo;
+        });
+    }
+
+
     return {
         getAppuntamenti: getAppuntamenti,
-        deleteAppuntamento: deleteAppuntamento
+        deleteAppuntamento: deleteAppuntamento,
+        getAppuntamento: getAppuntamento
     }
 
 });

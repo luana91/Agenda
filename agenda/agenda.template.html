@@ -12,7 +12,7 @@
                         <div class="caption">
                             <h3>{{app.titolo}}</h3>
                             <p>{{app.data | date: 'dd/MM/yyyy'}} alle ore: {{app.data | date: 'HH:mm'}}</p>
-                            <a class="btn btn-primary" role="button" style="float:left;margin-top:40px">Vai!</a>
+                            <a class="btn btn-primary" role="button" style="float:left;margin-top:40px" ui-sref="dettaglio({titolo:app.titolo})">Vai!</a>
                             <a class="btn btn-danger" role="button" style="float:right;margin-top:40px" ng-click="elimina($index)">Elimina</a>
                         </div>
                     </div>
