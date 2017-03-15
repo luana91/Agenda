@@ -1,14 +1,18 @@
 angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.when("/", "/");
+    $urlRouterProvider.when(" ", "/");
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
         .state('/', {
             url: '/',
             templateUrl: 'agenda/agenda.template.html',
-            controller: 'AgendaCtrl'
-
+            controller: 'AgendaCtrl',
+            resolve:{
+                appuntamenti: function (AgendaSrv){
+                    return AgendaSrv.getAppuntamenti();
+                }
+            }
         });
 
 
