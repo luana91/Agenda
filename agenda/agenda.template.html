@@ -1,3 +1,20 @@
-<h1>Ciao</h1>
+<div class="container">
+    <h1>I miei appuntamenti</h1>
+    <br>
+    <div class="row">
+        <div class="appuntamento">
+            <div class="row">
+                <div class="col-sm-6 col-md-4" ng-repeat="app in appuntamenti">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>{{app.titolo}}</h3>
+                            <p>{{app.data | date: 'dd/MM/yyyy'}} alle ore: {{app.data | date: 'HH:mm'}}</p>
+                            <p><a class="btn btn-primary" role="button">Vai!</a> <a class="btn btn-danger" role="button">Elimina</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+</div>
