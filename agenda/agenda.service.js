@@ -1,6 +1,7 @@
 angular.module('app').service('AgendaSrv', function () {
 
     var appuntamenti = [{
+            id: 0,
             titolo: "Appuntamento con angular",
             data: new Date(),
             descrizione: "Oggi ci sarà da divertirsi",
@@ -9,6 +10,7 @@ angular.module('app').service('AgendaSrv', function () {
 
         },
         {
+            id: 1,
             titolo: "Compleanno Paolo",
             data: new Date(2017, 03, 20, 09, 00),
             descrizione: "40 anni, festa GRANDE",
@@ -17,6 +19,7 @@ angular.module('app').service('AgendaSrv', function () {
 
         },
         {
+            id: 2,
             titolo: "Appuntamento con Patrizia",
             data: new Date(),
             descrizione: "Non si può dire",
@@ -34,9 +37,9 @@ angular.module('app').service('AgendaSrv', function () {
         appuntamenti.splice(indice, 1);
     }
 
-    var getAppuntamento = function (titolo) {
+    var getAppuntamento = function (id) {
         return appuntamenti.find(function (el) {
-            return el.titolo == titolo;
+            return el.id == id;
         });
     }
 

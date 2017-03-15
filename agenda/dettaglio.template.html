@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-10">
+        <div class="caption text-center">
+            <h1>Dettaglio</h1>
+            <h3>{{appuntamento.titolo}}</h3>
+            <p>{{appuntamento.data | date: 'dd/MM/yyyy'}} alle ore: {{appuntamento.data | date: 'HH:mm'}}</p>
+            <h3>{{appuntamento.descrizione}}</h3>
+            <p>Luogo: {{appuntamento.luogo}}</p>
+            <a class="btn btn-danger" role="button">Indietro</a>
+
+        </div>
+    </div>
+</div>

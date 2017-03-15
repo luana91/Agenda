@@ -15,14 +15,10 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
             }
         })
         .state('dettaglio', {
-            url: '/dettaglio/:titolo',
+            url: '/dettaglio/:id',
             templateUrl: 'agenda/dettaglio.template.html',
             controller: 'DettaglioCtrl',
-            resolve: {
-                appuntamento: function (AgendaSrv) {
-                    return AgendaSrv.getAppuntamento(titolo);
-                }
-            }
+
         })
 
 
