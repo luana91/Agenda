@@ -21,7 +21,7 @@ angular.module('app').service('AgendaSrv', function () {
         {
             id: 2,
             titolo: "Appuntamento con Patrizia",
-            data: new Date(),
+            data: new Date(2017, 03, 29, 19, 00),
             descrizione: "Non si può dire",
             luogo: "Stanza 101",
             priorita: "#007f00"

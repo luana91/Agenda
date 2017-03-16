@@ -5,6 +5,8 @@ angular.module('app').controller('DettaglioCtrl', function ($scope, AgendaSrv, $
     $timeout(function () {
         $scope.appuntamento = AgendaSrv.getAppuntamento($state.params.id);
         $scope.loading = false;
-    }, 500);
+    }, 1000);
+
+
 
 });
