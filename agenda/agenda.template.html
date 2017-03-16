@@ -1,4 +1,5 @@
 <div class="container">
+
     <div ng-include src="'navbar.html'"></div>
     <h3 class="text-center">I miei appuntamenti</h3>
 
@@ -7,7 +8,7 @@
         <div class="appuntamento">
             <div class="row">
                 <div class="col-sm-4 col-md-4" ng-repeat="app in appuntamenti | filter:ricerca | filtroPriorita:colore">
-                    <div class="thumbnail text-center" style="border:2px solid {{app.priorita}}; border-radius:10px; min-height:210px">
+                    <div class="thumbnail text-center" style="border:2px solid {{app.priorita}}; border-radius:10px; min-height:210px;" ng-class="{'alta':app.priorita == '#ff0000','media':app.priorita == '#ffa500', 'bassa':app.priorita == '#007f00' }">
                         <div class="caption">
                             <h3>{{app.titolo}}</h3>
                             <p>{{app.data | date: 'dd/MM/yyyy'}} alle ore: {{app.data | date: 'HH:mm'}}</p>

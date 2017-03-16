@@ -1,13 +1,20 @@
-<div class="row">
-    <div class="col-md-10">
-        <div class="caption text-center">
-            <h1>Dettaglio</h1>
-            <h3>{{appuntamento.titolo}}</h3>
-            <p>{{appuntamento.data | date: 'dd/MM/yyyy'}} alle ore: {{appuntamento.data | date: 'HH:mm'}}</p>
-            <h3>{{appuntamento.descrizione}}</h3>
-            <p>Luogo: {{appuntamento.luogo}}</p>
-            <a class="btn btn-danger" role="button">Indietro</a>
+<div class="container">
+    <div ng-show="loading">
+        <img src="https://image.freepik.com/free-icon/loading-mark_318-28792.jpg">
+    </div>
+    <div ng-include src="'navbar.html'"></div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="caption text-center" ng-hide="loading">
+                <h1>Dettaglio</h1>
+                <br><br>
+                <h2>{{appuntamento.titolo}}</h2>
+                <p>{{appuntamento.data | date: 'dd/MM/yyyy'}} alle ore: {{appuntamento.data | date: 'HH:mm'}}</p>
+                <h3>{{appuntamento.descrizione}}</h3>
+                <p>Luogo: {{appuntamento.luogo}}</p>
+                <a class="btn btn-danger" role="button" ng-click="indietro" ()>Indietro</a>
 
+            </div>
         </div>
     </div>
 </div>
