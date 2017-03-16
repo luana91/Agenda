@@ -9,6 +9,7 @@ angular.module('app').controller('DettaglioCtrl', function ($scope, AgendaSrv, $
 
     $scope.modifica = function () {
         AgendaSrv.aggiornaAppuntamento($scope.appuntamento);
+        $state.go('/');
 
     }
     $scope.indietro = function () {
