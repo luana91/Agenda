@@ -11,5 +11,8 @@ angular.module('app').controller('DettaglioCtrl', function ($scope, AgendaSrv, $
         AgendaSrv.aggiornaAppuntamento($scope.appuntamento);
 
     }
+    $scope.indietro = function () {
+        $state.go("/");
+    }
 
 });
