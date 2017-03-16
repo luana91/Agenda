@@ -7,6 +7,8 @@ angular.module('app').controller('DettaglioCtrl', function ($scope, AgendaSrv, $
         $scope.loading = false;
     }, 500);
 
-
+    $scope.modifica = function () {
+        console.log($scope.appuntamento)
+    }
 
 });

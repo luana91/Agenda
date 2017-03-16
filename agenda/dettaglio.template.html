@@ -6,14 +6,32 @@
     <div class="row">
         <div class="col-md-10">
             <div class="caption text-center" ng-hide="loading">
-                <h1>Dettaglio</h1>
-                <br><br>
-                <h2>{{appuntamento.titolo}}</h2>
-                <p>{{appuntamento.data | date: 'dd/MM/yyyy'}} alle ore: {{appuntamento.data | date: 'HH:mm'}}</p>
-                <h3>{{appuntamento.descrizione}}</h3>
-                <p>Luogo: {{appuntamento.luogo}}</p>
-                <a class="btn btn-danger" role="button" ui-sref="/">Indietro</a>
-
+                <form ng-submit="modifica()" novalidate>
+                    <div class="form-group">
+                        <label for="titolo">Titolo</label>
+                        <input type="text" id="titolo" class="form-control" ng-model="appuntamento.titolo"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="descrizione">Descrizione</label>
+                        <input type="text" id="descrizione" class="form-control" ng-model="appuntamento.descrizione"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="luogo">Luogo</label>
+                        <input type="text" id="luogo" class="form-control" ng-model="appuntamento.luogo"></input>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" ng-model="appuntamento.priorita">
+                            <option style="background-color:#ff0000" value="#ff0000">Alta</option>
+                            <option style="background-color:#ff0000" value="#ffa500">Media</option>
+                            <option style="background-color:#ff0000" value="#007f00">Bassa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Data</label>
+                        <input type="datatime-local" ng-model="appuntamento.data">
+                    </div>
+                    <button type="submit">Salva</button>
+                </form>
             </div>
         </div>
     </div>
