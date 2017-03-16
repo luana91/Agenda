@@ -20,9 +20,9 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
             controller: 'DettaglioCtrl',
 
         })
-        .state('nuova', {
-            url: '/dettaglio/nuova',
-            templateUrl: 'agenda/dettaglio.nuova.html',
+        .state('crea', {
+            url: '/crea',
+            templateUrl: 'agenda/nuova.template.html',
             controller: 'NuovaCtrl',
 
         })
